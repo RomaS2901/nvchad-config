@@ -10,10 +10,18 @@ local sources = {
   b.diagnostics.luacheck,
 
   -- python
-  null_ls.builtins.formatting.black,
-  null_ls.builtins.formatting.isort,
-  null_ls.builtins.diagnostics.flake8,
-  null_ls.builtins.diagnostics.mypy,
+  null_ls.builtins.formatting.black.with {
+    prefer_local = true,
+  },
+  null_ls.builtins.formatting.isort.with {
+    prefer_local = true,
+  },
+  null_ls.builtins.diagnostics.flake8.with {
+    prefer_local = true,
+  },
+  null_ls.builtins.diagnostics.mypy.with {
+    prefer_local = true,
+  },
 }
 
 null_ls.setup {
