@@ -6,6 +6,8 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<leader>fk"] = { ": Telescope keymaps<CR>", "Find keymaps" },
     -- Windows
+    ["|"] = { ": vsplit<CR>", "Vertical split" },
+    ["\\"] = { ": split<CR>", "Horizontal split" },
     ["<C-Left>"] = { ":wincmd <<CR>", "Window decrease width" },
     ["<C-Up>"] = { ":wincmd +<CR>", "Window increase height" },
     ["<C-Right>"] = { ":wincmd ><CR>", "Window increase width" },
