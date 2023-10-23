@@ -110,6 +110,21 @@ local plugins = {
       require "custom.configs.neotest"
     end,
   },
+
+  -- Trouble
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = { "TroubleToggle" },
+    opts = {},
+  },
+  -- TODO comment
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    event = "BufRead",
+    opts = {},
+  },
 }
 
 return plugins
