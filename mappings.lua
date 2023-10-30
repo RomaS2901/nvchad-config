@@ -12,9 +12,14 @@ M.general = {
     ["<C-Up>"] = { ":wincmd +<CR>", "Window increase height" },
     ["<C-Right>"] = { ":wincmd ><CR>", "Window increase width" },
     ["<C-Down>"] = { ":wincmd -<CR>", "Window decrease height" },
+    -- Terminal
+    ["<leader>th"] = { ': lua require("nvterm.terminal").toggle("horizontal")<CR>', "Terminal horizontal" },
+    ["<leader>tv"] = { ': lua require("nvterm.terminal").toggle("vertical")<CR>', "Terminal vertical" },
+    ["<leader>tf"] = { ': lua require("nvterm.terminal").toggle("float")<CR>', "Terminal float" },
     -- DAP
     ["<leader>db"] = { ": DapToggleBreakpoint<CR>", "Toggle breakpoint" },
     ["<leader>dc"] = { ": DapContinue<CR>", "Continue" },
+    ["<leader>dso"] = { ": DapStepOver<CR>", "Continue" },
     ["<leader>dr"] = { ": DapToggleRepl<CR>", "Toggle REPL" },
     -- Neotest
     ["<leader>dm"] = { ": Neotest run<CR>", "Run nearest test" },
@@ -28,6 +33,19 @@ M.general = {
     ["<leader>del"] = { ": Dotenv<CR>", "Load .env" },
     -- Trouble
     ["<leader>td"] = { ": TroubleToggle document_diagnostics<CR>", "Trouble document" },
+    -- Flash
+    ["<leader>s"] = {
+      function()
+        require("flash").jump()
+      end,
+      desc = "Flash jump",
+    },
+    ["<leader>S"] = {
+      function()
+        require("flash").treesitter()
+      end,
+      desc = "Flash Treesitter",
+    },
   },
   v = {
     [">"] = { ">gv", "indent" },
