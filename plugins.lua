@@ -125,6 +125,12 @@ local plugins = {
     event = "BufRead",
     opts = {},
   },
+  -- Flash for fast buffer navigation
+  {
+    "folke/flash.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }
 
 return plugins
