@@ -1,5 +1,6 @@
 ---@type MappingsTable
 local M = {}
+-- local cmp = require "cmp"
 
 M.general = {
   n = {
@@ -38,13 +39,13 @@ M.general = {
       function()
         require("flash").jump()
       end,
-      desc = "Flash jump",
+      "Flash jump",
     },
     ["<leader>S"] = {
       function()
         require("flash").treesitter()
       end,
-      desc = "Flash Treesitter",
+      "Flash Treesitter",
     },
   },
   v = {
