@@ -131,6 +131,11 @@ local plugins = {
     event = "VeryLazy",
     opts = {},
   },
+  -- Copilot
+  {
+    "github/copilot.vim",
+    event = "BufRead",
+  },
 }
 
 return plugins
