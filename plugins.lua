@@ -133,13 +133,12 @@ local plugins = {
   },
   -- Copilot
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.g.copilot_tab_fallback = ""
+      require("copilot").setup {}
     end,
-    event = "BufRead",
   },
 }
 
